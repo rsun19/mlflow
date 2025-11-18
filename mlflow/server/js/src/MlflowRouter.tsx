@@ -11,6 +11,8 @@ import {
   Route,
   Routes,
   createLazyRouteElement,
+  useLocation,
+  useSearchParams,
 } from './common/utils/RoutingUtils';
 import { MlflowHeader } from './common/components/MlflowHeader';
 
@@ -37,17 +39,32 @@ const MlflowRootRoute = ({
   isDarkTheme,
   setIsDarkTheme,
   useChildRoutesOutlet = false,
+  isEmbedded = false,
   routes,
 }: {
   isDarkTheme?: boolean;
   setIsDarkTheme?: (isDarkTheme: boolean) => void;
   useChildRoutesOutlet?: boolean;
+  isEmbedded?: boolean;
   routes?: any[];
 }) => {
   useInitializeExperimentRunColors();
 
   const [showSidebar, setShowSidebar] = useState(true);
   const { theme } = useDesignSystemTheme();
+
+  const location = useLocation();
+  const [searchParams] = useSearchParams();
+  const embeddedByQuery = searchParams.get('embedding') === 'true' && location.pathname.startsWith('/experiments');
+  const hideChrome = isEmbedded || embeddedByQuery;
+
+  if (hideChrome) {
+    return (
+      <React.Suspense fallback={<LegacySkeleton />}>
+        <Outlet />
+      </React.Suspense>
+    );
+  }
 
   return (
     <div css={{ display: 'flex', flexDirection: 'column', height: '100%' }}>

@@ -1,4 +1,6 @@
 .pf-shell-root {
+    height: 100%;
+    
     .du-bois-light-alert-error {
         background-color: var(--pf-t--global--background--color--floating--default);
     }
@@ -82,8 +84,8 @@
         border: var(--pf-t--global--border--width--high-contrast--regular) solid var(--pf-t--global--border--color--high-contrast);
     }
 
-    [class*="MlflowHeader"] a {
-        color: var(--pf-v6-c-content--Color);
-        text-decoration: none;
+    header > div > a {
+        color: var(--pf-v6-c-content--Color) !important;
+        text-decoration: none !important;
     }
 }

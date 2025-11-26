@@ -28,7 +28,6 @@ import {
 import pfTokens from 'mod-arch-kubeflow/dist/style/pf-tokens-SSOT.json';
 
 export const colorList: Record<string, string> = {
-    // Brand/Primary colors
     actionPrimaryBackgroundDefault: pfTokens.components.button[c_button_m_primary_BackgroundColor.name],
     actionPrimaryBackgroundHover: pfTokens.components.button[c_button_m_primary_hover_BackgroundColor.name],
     actionPrimaryBackgroundPress: pfTokens.components.button[c_button_m_primary_m_clicked_BackgroundColor.name],
@@ -37,7 +36,6 @@ export const colorList: Record<string, string> = {
     actionPrimaryTextPress: pfTokens.components.button[c_button_m_primary_m_clicked_Color.name],
     actionPrimaryIcon: pfTokens.components.button[c_button_m_primary__icon_Color.name],
 
-    // Action default colors
     actionDefaultBorderDefault: t_global_border_color_default.var,
     actionDefaultBorderFocus: pfTokens.components.button[c_button_m_primary_BackgroundColor.name],
     actionDefaultBorderHover: pfTokens.components.button[c_button_m_primary_BackgroundColor.name],
@@ -46,7 +44,6 @@ export const colorList: Record<string, string> = {
     actionDefaultIconHover: pfTokens.components.button[c_button_m_primary_hover_Color.name],
     actionDefaultIconPress: pfTokens.components.button[c_button_m_primary_m_clicked_Color.name],
 
-    // Action icon colors
     actionIconBackgroundDefault: pfTokens.components.button[c_button_m_primary_BackgroundColor.name],
     actionIconBackgroundHover: pfTokens.components.button[c_button_m_primary_hover_BackgroundColor.name],
     actionIconBackgroundPress: pfTokens.components.button[c_button_m_primary_m_clicked_BackgroundColor.name],
@@ -54,7 +51,6 @@ export const colorList: Record<string, string> = {
     actionIconIconHover: pfTokens.components.button[c_button_m_primary_hover_Color.name],
     actionIconIconPress: pfTokens.components.button[c_button_m_primary_m_clicked_Color.name],
 
-    // Action tertiary colors
     actionTertiaryBackgroundDefault: t_global_background_color_floating_default.var,
     actionTertiaryBackgroundHover: t_global_background_color_floating_default.var,
     actionTertiaryBackgroundPress: t_global_background_color_floating_default.var,
@@ -68,7 +64,6 @@ export const colorList: Record<string, string> = {
     actionTertiaryTextHover: pfTokens.components.button[c_button_m_tertiary_hover_Color.name],
     actionTertiaryTextPress: pfTokens.components.button[c_button_m_tertiary_m_clicked_Color.name],
     
-    // Danger colors
     actionDangerDefaultBackgroundDefault: t_global_background_color_floating_default.var,
     actionDangerDefaultBackgroundHover: t_global_background_color_floating_default.var,
     actionDangerDefaultBackgroundPress: t_global_background_color_floating_default.var,
@@ -83,20 +78,17 @@ export const colorList: Record<string, string> = {
     actionDangerPrimaryBackgroundPress: t_global_background_color_floating_default.var,
     actionDangerPrimaryText: t_global_background_color_primary_default.var,
     
-    // Background colors
     backgroundDanger: t_global_background_color_floating_default.var,
     backgroundPrimary: t_global_background_color_primary_default.var,
     backgroundSecondary: t_global_background_color_secondary_default.var,
     backgroundSuccess: t_global_background_color_floating_default.var,
     backgroundWarning: t_global_color_status_warning_default.var,
 
-    // Border colors
     border: t_global_border_color_default.var,
     borderAccessible: c_content_Color.var,
     borderDanger: t_global_border_color_status_danger_default.var,
     borderWarning: t_global_border_color_status_warning_default.var,
 
-    // Text colors
     textPlaceholder: c_content_Color.var,
     textPrimary: c_content_Color.var,
     textSecondary: c_content_Color.var,

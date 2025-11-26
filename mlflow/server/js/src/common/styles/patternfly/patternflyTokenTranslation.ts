@@ -42,6 +42,4 @@ export const PATTERN_FLY_TOKEN_TRANSLATION = (theme: Theme, isDarkTheme: boolean
         ...theme.responsive,
         ...patternflyResponsive,
     },
-    // Note: gradients skipped - PatternFly has very limited gradient tokens
-    // Note: DU_BOIS_INTERNAL_ONLY skipped - internal use only, no PatternFly equivalent
 });

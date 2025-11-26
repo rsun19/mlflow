@@ -9,14 +9,13 @@ import { convertPxStringToPx } from "../utils";
 type availableBreakpoints = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 type ResponsiveOptions<RType> = Record<availableBreakpoints, RType>;
 
-// PatternFly breakpoints (similar to Bootstrap 4 but with some differences)
 const breakpoints: ResponsiveOptions<number> = {
-  xs: convertPxStringToPx(t_global_breakpoint_xs.value),     // Extra small devices
-  sm: convertPxStringToPx(t_global_breakpoint_sm.value),   // Small devices (landscape phones)
-  md: convertPxStringToPx(t_global_breakpoint_md.value),   // Medium devices (tablets)
-  lg: convertPxStringToPx(t_global_breakpoint_lg.value),   // Large devices (desktops) 
-  xl: convertPxStringToPx(t_global_breakpoint_xl.value),  // Extra large devices (large desktops)
-  xxl: convertPxStringToPx(t_global_breakpoint_2xl.value), // Extra extra large devices
+  xs: convertPxStringToPx(t_global_breakpoint_xs.value),
+  sm: convertPxStringToPx(t_global_breakpoint_sm.value),
+  md: convertPxStringToPx(t_global_breakpoint_md.value),
+  lg: convertPxStringToPx(t_global_breakpoint_lg.value),
+  xl: convertPxStringToPx(t_global_breakpoint_xl.value),
+  xxl: convertPxStringToPx(t_global_breakpoint_2xl.value),
 };
 
 const mediaQueries: ResponsiveOptions<string> = {

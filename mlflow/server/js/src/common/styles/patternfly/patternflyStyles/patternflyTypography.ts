@@ -8,8 +8,8 @@ import {
   t_global_font_size_heading_lg,
   t_global_font_line_height_body,
   t_global_font_line_height_heading,
-} from "@patternfly/react-tokens";
-import { convertRemStringToPx } from "../utils";
+} from '@patternfly/react-tokens';
+import { convertRemStringToPx } from '../utils';
 
 export const patternflyTypography = {
   fontSizeSm: convertRemStringToPx(t_global_font_size_body_sm.value),

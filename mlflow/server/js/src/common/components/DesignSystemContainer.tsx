@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef } from 'react';
-import { DesignSystemProvider, DesignSystemThemeProvider, useDesignSystemTheme } from '@databricks/design-system';
+import { DesignSystemProvider, DesignSystemThemeProvider } from '@databricks/design-system';
 import { ColorsPaletteDatalist } from './ColorsPaletteDatalist';
 import { Theme } from '@emotion/react';
 import { PATTERN_FLY_TOKEN_TRANSLATION } from '../styles/patternfly/patternflyTokenTranslation';
@@ -50,7 +50,7 @@ export const DesignSystemContainer = (props: DesignSystemContainerProps) => {
     return document.body;
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const patternflyDarkModeSwitcher = document.getElementById('patternfly-dark-mode-switcher');
     if (patternflyDarkModeSwitcher) {
       if (isDarkTheme) {
@@ -66,8 +66,8 @@ export const DesignSystemContainer = (props: DesignSystemContainerProps) => {
       <DesignSystemProvider getPopupContainer={getPopupContainer} {...props}>
         <MLflowImagePreviewContainer.Provider value={{ getImagePreviewPopupContainer }}>
           <EmotionThemeProvider theme={(baseTheme) => PATTERN_FLY_TOKEN_TRANSLATION(baseTheme)}>
-              <div className="pf-shell-container">{children}</div>
-              <div ref={modalContainerElement} />
+            <div className="pf-shell-container">{children}</div>
+            <div ref={modalContainerElement} />
           </EmotionThemeProvider>
         </MLflowImagePreviewContainer.Provider>
       </DesignSystemProvider>

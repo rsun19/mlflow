@@ -1,12 +1,14 @@
-import { t_global_spacer_lg,
-  t_global_spacer_md, t_global_spacer_sm,
+import {
+  t_global_spacer_lg,
+  t_global_spacer_md,
+  t_global_spacer_sm,
   t_global_spacer_xl,
   t_global_spacer_xs,
   t_global_spacer_2xl,
   t_global_spacer_4xl,
   t_global_spacer_3xl,
-} from "@patternfly/react-tokens";
-import { convertRemStringToPx } from "../utils";
+} from '@patternfly/react-tokens';
+import { convertRemStringToPx } from '../utils';
 
 export const patternflySpacing = {
   xs: convertRemStringToPx(t_global_spacer_xs.value),

@@ -7,7 +7,7 @@ import { patternflyBorders, patternflyLegacyBorders } from "./patternflyStyles/p
 import { patternflyResponsive } from "./patternflyStyles/patternflyResponsive";
 import { patternflyBoxShadows } from "./patternflyStyles/patternflyShadows";
 
-export const PATTERN_FLY_TOKEN_TRANSLATION = (theme: Theme, isDarkTheme: boolean): Theme => ({
+export const PATTERN_FLY_TOKEN_TRANSLATION = (theme: Theme): Theme => ({
     ...theme,
     colors: {
         ...theme.colors,

@@ -65,7 +65,7 @@ export const DesignSystemContainer = (props: DesignSystemContainerProps) => {
     <ThemeProvider isDarkTheme={isDarkTheme}>
       <DesignSystemProvider getPopupContainer={getPopupContainer} {...props}>
         <MLflowImagePreviewContainer.Provider value={{ getImagePreviewPopupContainer }}>
-          <EmotionThemeProvider theme={(baseTheme) => PATTERN_FLY_TOKEN_TRANSLATION(baseTheme, isDarkTheme)}>
+          <EmotionThemeProvider theme={(baseTheme) => PATTERN_FLY_TOKEN_TRANSLATION(baseTheme)}>
               <div className="pf-shell-container">{children}</div>
               <div ref={modalContainerElement} />
           </EmotionThemeProvider>

@@ -1,6 +1,8 @@
-.pf-shell-root {
+.pf-shell-container {
     height: 100%;
-    
+}
+
+.pf-shell-root {    
     .du-bois-light-alert-error {
         background-color: var(--pf-t--global--background--color--floating--default);
     }
@@ -20,6 +22,7 @@
         min-width: calc(1em * var(--pf-t--global--font--line-height--body) + var(--pf-t--global--spacer--control--vertical--default) + var(--pf-t--global--spacer--control--vertical--default));
         max-height: 3rem !important;
         height: auto !important;
+        align-self: center !important;
     }
     
     div.du-bois-light-space-item > button.du-bois-light-btn:not([class*="du-bois-light-btn-dangerous"]):not([class*="du-bois-light-btn-primary"]):not(:disabled):not([aria-disabled="true"]), div.du-bois-dark-space-item > button.du-bois-dark-btn:not([class*="du-bois-dark-btn-dangerous"]):not([class*="du-bois-dark-btn-primary"]):not(:disabled):not([aria-disabled="true"]) {
@@ -117,6 +120,10 @@
     button[aria-label="Toggle sidebar"]:hover {
         color: initial !important;
         background-color: var(--pf-t--global--background--color--secondary--hover) !important;
+    }
+
+    button[data-component-id="mlflow_sidebar.new_button"] {
+        width: 100%;
     }
 
     div:has(.mlflow-experiment-page-side-nav-collapsed) {

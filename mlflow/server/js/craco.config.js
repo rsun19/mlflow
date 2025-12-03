@@ -120,11 +120,11 @@ function suppressAutoprefixerWarnings(config) {
   if (!config.ignoreWarnings) {
     config.ignoreWarnings = [];
   }
-  
+
   config.ignoreWarnings.push({
     message: /autoprefixer.*start value has mixed support/,
   });
-  
+
   return config;
 }
 
